@@ -3,17 +3,13 @@ import { createObserveModule } from '@nestjs/observe';
 
 import { AppController } from './app.controller.js';
 import { AppService } from './app.service.js';
-
-import { ConceitosManualModule } from '../conceitos-manual/conceitos-manual.module.js';
-import { ConceitosAutomaticoModule } from '../conceitos-automatico/conceitos-automatico.module.js';
+import { RecadosModule } from '../recados/recados.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
 @Module({
   imports: [
-    ConceitosManualModule,
-
-    ConceitosAutomaticoModule,
+    RecadosModule,
 
     ObserveModule.forRoot({
       appKey: 'YOUR_APP_KEY',

@@ -5,12 +5,12 @@ import { Controller, Get } from '@nestjs/common';
 export class AppController {
 constructor(private readonly appService: AppService) {}
 
-  @Get('hello') // Método da Solicitacão -> Ler (Read) -> CRUD
+  // @Get('hello') // Método da Solicitacão -> Ler (Read) -> CRUD
   getHello(): string {
     return 'Qualquer coisa.';
   }
 
-  @Get('exemplo')
+  // @Get('exemplo')
   exemplo() {
     return this.appService.solucionaExemplo();
   }
